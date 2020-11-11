@@ -36,7 +36,20 @@ class Rectangle:
             string+="\n"
         return string
     
-
+    def get_amount_inside(self,rect):
+        a=self.width
+        b=self.height
+        c=rect.width
+        d=rect.height
+        count=0
+        while a>=0 and b>0:
+            if a>=c and b>=d:
+                count+=1
+                a-=c
+            else:
+                a=self.width
+                b-=d
+        return count
 
 
 class Square(Rectangle):
