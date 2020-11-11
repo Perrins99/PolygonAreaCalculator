@@ -91,7 +91,7 @@ class UnitTests(unittest.TestCase):
         actual = self.rect.get_picture()
         expected = "Too big for picture."
         self.assertEqual(actual, expected, 'Expected message: "Too big for picture."')
-
+    
     def test_get_amount_inside(self):
         self.rect.set_height(10)
         self.rect.set_width(15)
@@ -110,6 +110,6 @@ class UnitTests(unittest.TestCase):
         actual = rect2.get_amount_inside(self.rect)
         expected = 0
         self.assertEqual(actual, expected, 'Expected `get_amount_inside` to return 0.')
-        
+    
 if __name__ == "__main__":
     unittest.main()
